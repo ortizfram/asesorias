@@ -486,24 +486,25 @@ h2 {
   }
 
   .hero-media {
-    height: 240px;
-    aspect-ratio: auto;
-    min-height: 0;
+    height: auto;
+    overflow: visible;
   }
 
   .hero-photo {
+    display: block;
+    width: 100%;
+    height: auto;
     object-fit: contain;
     object-position: center center;
     mask-image: none;
   }
 
   .hero-media::after {
-    background:
-      linear-gradient(180deg, rgba(6, 7, 11, 0) 0%, rgba(6, 7, 11, 0.18) 55%, rgba(6, 7, 11, 0.4) 100%);
+    display: none;
   }
 
   .hero-media-fade {
-    height: 96px;
+    display: none;
   }
 
   h1 {
@@ -516,10 +517,13 @@ h2 {
   }
 
   .hero-media-caption {
+    position: static;
     display: block;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 12px;
+    padding: 14px 14px 12px;
   }
 
   .hero-actions,
